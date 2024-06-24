@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+/* background-img */
+  body{
+    background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+    font-family: Arial, sans-serif;
+    background-color: hsl(0,0%,95%);
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    -webkit-animation: slidein  80s;
+    animation: slidein 80s;
+
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+
+     -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+@-webkit-keyframes slidein {
+    from {background-position: top; background-size:3000px; }
+    to {background-position: -100px 0px;background-size:2750px;}
+    }
+    
+    @keyframes slidein {
+    from {background-position: top;background-size:3000px; }
+    to {background-position: -100px 0px;background-size:2750px;}
+    
+    }
+
+/* Header Animation */
+  .container {
+    position: relative;
+    margin-top: 20px;
+  }
+  .container span {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    color: black;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i));
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+
+/* weather card */
+
+.weatherForm{
+    margin: 20px;
+    margin-bottom: 50px;
+}
+.cityInput{
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 2px solid hsla(0,0%,20%,0.3);
+    border-radius:10px;
+    margin: 10px;
+    width: 300px;
+}
+
+button[type="submit"]{
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: hsl(122,39%,50%);
+    color: white;
+    border: none;
+    border-radius:5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover{
+    background-color: hsl(122,39%,40%);
+}
+
+.card{
+    background: linear-gradient(180deg,hsl(210,100%,75%),hsl(40,100%,75%));
+    padding: 50px;
+    border-radius:10px ;
+    box-shadow: 2px 2px 5px hsla(0,0%,20%,0.3);
+    min-width: 300px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -22px;
+    
+}
+
+h2{
+    font-size: 3.5rem;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+p{
+    font-size: 1.5rem;
+    margin: 5px 0;
+}
+
+.cityDisplay, .tempDisplay{
+   font-size: 3.5rem;
+   font-weight: bold;
+   color : hsla(0,0%,0%,0.75);
+   margin-bottom: 25px;
+}
+
+.humidityDisplay{
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.descDisplay{
+   font-style: italic;
+   font-weight: bold;
+   font-size: 2rem;
+   font-family: cursive;
+
+}
+
+.weatherEmoji{
+    margin: 0;
+    font-size: 7.5rem;
+    box-shadow: hsla(0,0%,0%,0.75);
+}
+
+.errorDisplay{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: hsla(0,0%,0%,1);
+}
+
+
+
+
+
